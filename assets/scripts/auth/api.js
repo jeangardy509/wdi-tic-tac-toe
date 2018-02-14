@@ -50,6 +50,7 @@ const onChangePassword = function (data) {
     data
   })
 }
+
 module.exports = {
   signUp,
   signIn,

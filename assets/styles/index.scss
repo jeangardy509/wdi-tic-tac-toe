@@ -1,2 +1,100 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+body {
+  background-color: #000000;
+background: url("https://wallpaperscraft.com/image/laptop_room_on_the_desk_keyboard_mouse_apple_window_interior_73963_1920x1080.jpg")
+no-repeat center center;
+background-size: cover;
+margin-bottom: 45%;
+
+}
+
+h1 {
+  color: #f00;
+  font-family: 'Lobster', cursive;
+  font-size: 70px;
+  text-align: center;
+  text-shadow: 5px 5px white;
+}
+
+h2 {
+  color: #ffe464;
+  text-shadow: 10px 10px 10px #0000FF;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 4.0em;
+  font-family: 'Playball', cursive
+}
+
+#header {
+  color: #ffe464;
+  text-shadow: 10px 10px 10px #0000FF;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 4.0em;
+  font-family: 'Berkshire Swash', cursive;
+}
+
+.hide-for-signed-up {
+  margin-top: 30px;
+  margin-left: 10px;
+}
+
+#sign-up {
+color: red;
+font-family: 'Playball', cursive;
+margin-bottom: 10px;
+}
+
+#sign-in {
+  color: blue;
+  font-family: 'Playball', cursive;
+}
+
+table {
+	border-collapse: collapse;
+  margin-left: 40%;
+  margin-top: 10%;
+
+}
+#turn {
+  margin-left: 45%;
+  margin-top: 10%;
+  color: white;
+  font-family: 'Berkshire Swash', cursive;
+  font-size: 3.5em;
+}
+
+td {
+	background-color: blue;
+	border: 3px solid white;
+	font-size:80px;
+	color:#ffffff;
+	border-radius: 10px 10px 10px 10px;
+}
+
+.show-for-signed-in {
+  display: none;
+}
+
+#sign-out {
+font-family: 'Berkshire Swash', cursive;
+margin-bottom: 10px;
+}
+
+#change-password {
+font-family: 'Berkshire Swash', cursive;
+}
+
+h3 {
+  font-family: 'Berkshire Swash', cursive;
+  color: white;
+  text-shadow: 10px 10px 10px blue;
+
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 4.0em;
+}

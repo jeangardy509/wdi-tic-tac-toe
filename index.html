@@ -3,7 +3,8 @@
     <head>
       <title>JEAN'S TIC TAC TOE!</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
-
+      <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Lobster" rel="stylesheet">
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
       <link href='https://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
@@ -14,13 +15,13 @@
     </head>
 
     <body class="container-fluid">
-<h1>JEAN'S TIC TAC TOE!</h1>
+<h1>Welcome to Tic Tac Toe with Jean and friends!</h1>
+<h2>PLease create an account or sign in to start playing!</h2>
 
            <p id="message"></p>
-
+<div class="hide-for-signed-up">
            <form id="sign-up" class="border">
              <fieldset>
-               <legend>Sign up!</legend>
                <input type="text" name="credentials[email]" placeholder="Email">
                <input type="password" name="credentials[password]" placeholder="Password">
                <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
@@ -30,50 +31,30 @@
 
            <form id="sign-in" class="border">
              <fieldset>
-               <legend>Sign in</legend>
                <input type="text" name="credentials[email]" placeholder="Email">
                <input type="password" name="credentials[password]" placeholder="Password">
-               <input type="submit" value="Sign in">
+               <input type="submit" value="Sign in!">
              </fieldset>
            </form>
+         </div>
 
+<div class="show-for-signed-in">
+<h3>Let's play tic tac toe with Jean and friends!</h3>
              <form id="sign-out" class="border">
                <fieldset>
-                 <legend>Sign Out</legend>
                  <input type="submit" value="Sign Out!">
                </fieldset>
            </form>
 
            <form id="change-password" class="border">
              <fieldset>
-               <legend>change password</legend>
                <input type="password" name="passwords[old]" placeholder="Old Password">
                <input type="password" name="passwords[new]" placeholder="New Password">
                <input type="submit" value="Change password!">
              </fieldset>
       </form>
-
-
-<div id="game">
-    <button></button>
-    <button></button>
-    <button></button>
-  </div>
-
-  <div>
-    <button></button>
-    <button></button>
-    <button></button>
-  </div>
-
-  <div>
-    <button></button>
-    <button></button>
-    <button></button>
-  </div>
-
-  <div id="showMessgae">Meesge Game!</div>
-
-
+      <div id="tictactoe" class="winner"></div>
+  			<span id='turn'>Player X</span>
+  		</div>
     </body>
 </html>
