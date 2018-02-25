@@ -142,11 +142,11 @@ function set () {
   moves += 1
   score[turn] += this.identifier
   if (win(this)) {
-   ('Winner: Player ' + turn)
-    startNewGame()
+    $('#message').text('The winner is player ' + turn)
+    // startNewGame()
   } else if (moves === num * num) {
- ('Draw')
-    startNewGame()
+    $('#messgae').text('ITS A DRAW')
+    // startNewGame()
   } else {
     turn = turn === 'X' ? 'O' : 'X'
     document.getElementById('turn').textContent = 'Player ' + turn

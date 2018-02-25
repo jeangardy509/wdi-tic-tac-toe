@@ -18,7 +18,7 @@ const signUpFailure = function (error) {
 }
 
 const signInSuccess = function (data) {
-  $('#message').text('Sign in Successfully')
+  $('#message').text('Sign in Successfully ' + data.user.id)
   $('#message').css('background-color', 'green')
   $('#message').css('color', 'white')
   $('.show-for-signed-in').css('display', 'inline')
@@ -71,6 +71,7 @@ const changePasswordFailure = function (error) {
   $('#message').css('color', 'white')
   console.log(error)
 }
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
