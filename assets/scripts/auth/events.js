@@ -3,8 +3,12 @@
 const api = require('./api')
 const getFormFields = require('../../../lib/get-form-fields')
 const ui = require('./ui')
-// const onSignOut = function (event) {
-// event.preventDefault()
+
+// game api
+
+const gameApi = require('./api.js')
+const gameUi = require('./ui.js')
+const store = ('./../store.js')
 
 const onSignUp = function (event) {
   event.preventDefault()
@@ -41,11 +45,25 @@ const onChangePassword = function (event) {
     .catch(ui.changePasswordFailure)
 }
 
+// game api
+
+const onReset = function (event) {
+  event.preventDefault()
+  console.log('working!')
+  gameApi.reset(store)
+    .then(gameUi.resetSuccess)
+}
+
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
   $('#sign-out').on('submit', onSignOut)
   $('#change-password').on('submit', onChangePassword)
+  $('#reset').on('submit', onReset)
+}
+
+module.exports = {
+  addHandlers
 }
 
  let num = 3,
@@ -142,11 +160,11 @@ function set () {
   moves += 1
   score[turn] += this.identifier
   if (win(this)) {
-    $('#message').text('The winner is player ' + turn)
-    // startNewGame()
+    $('#status').text('The winner is player ' + turn)
+    startNewGame()
   } else if (moves === num * num) {
-    $('#messgae').text('ITS A DRAW')
-    // startNewGame()
+    $('#status').text('IT\'S  A  DRAW')
+    startNewGame()
   } else {
     turn = turn === 'X' ? 'O' : 'X'
     document.getElementById('turn').textContent = 'Player ' + turn
@@ -154,7 +172,3 @@ function set () {
 }
 
 init()
-
-module.exports = {
-  addHandlers
-}

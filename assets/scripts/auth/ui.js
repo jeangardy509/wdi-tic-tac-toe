@@ -29,6 +29,9 @@ const signInSuccess = function (data) {
   $('body').css('background-repeat', 'no-repeat')
   $('body').css('background-attachment', 'fixed')
   $('body').css('background-size', 'cover')
+  $('#tictactoe').css('display', 'inline')
+  $('#tictactoe').css('display', 'none')
+  $('#turn').css('display', 'none')
   console.log(data)
   store.user = data.user
 }
@@ -72,6 +75,16 @@ const changePasswordFailure = function (error) {
   console.log(error)
 }
 
+// game api
+
+const resetSuccess = function (data) {
+  $('#tictactoe').css('display', 'inline')
+  $('#tictactoe').css('display', 'inline')
+  $('#turn').css('display', 'inline')
+  console.log(data)
+  store.game = data.game
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -80,5 +93,6 @@ module.exports = {
   signOutSuccess,
   signOutFailure,
   changePasswordSuccess,
-  changePasswordFailure
+  changePasswordFailure,
+  resetSuccess
 }

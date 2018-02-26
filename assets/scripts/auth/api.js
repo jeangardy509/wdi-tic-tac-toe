@@ -51,9 +51,23 @@ const onChangePassword = function (data) {
   })
 }
 
+// gane api
+const reset = function (data) {
+  return $.ajax({
+    url: config.apiOrigins.production + '/games/',
+    method: 'POST',
+    headers: {
+      contentType: 'application/json',
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   signOut,
-  onChangePassword
+  onChangePassword,
+  reset
 }
