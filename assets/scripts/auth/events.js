@@ -62,6 +62,12 @@ const addHandlers = () => {
   $('#reset').on('submit', onReset)
 }
 
+// const onGetGames = function (event) {
+//   event.preventDefault()
+//   gameApi.getGames()
+//     .then(gameUi.getGamesSuccess)
+// }
+
 module.exports = {
   addHandlers
 }

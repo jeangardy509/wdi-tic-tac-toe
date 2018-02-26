@@ -1,6 +1,8 @@
 'use strict'
 
 const store = require('../store')
+const gameMove = ('./events.js')
+
 
 const signUpSuccess = function (data) {
   $('#message').text('Account Successfully created')
@@ -85,6 +87,12 @@ const resetSuccess = function (data) {
   store.game = data.game
 }
 
+const updateGameSuccess = function (data) {
+  // $('#please').text('Game Updated Successfully')
+  store.game.value = gameMove.currentPlayer
+  store.game.over = false
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -94,5 +102,6 @@ module.exports = {
   signOutFailure,
   changePasswordSuccess,
   changePasswordFailure,
-  resetSuccess
+  resetSuccess,
+  updateGameSuccess
 }

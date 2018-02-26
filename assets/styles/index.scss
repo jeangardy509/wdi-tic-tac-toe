@@ -57,15 +57,27 @@ margin-bottom: 10px;
 table {
 	border-collapse: collapse;
   margin-left: 40%;
-  margin-top: 10%;
+  margin-top: 5%;
 
 }
 #turn {
-  margin-left: 45%;
+margin-left: 10%;
   margin-top: 10%;
   color: white;
   font-family: 'Berkshire Swash', cursive;
   font-size: 3.5em;
+}
+
+
+#status {
+  margin-left: 35%;
+  margin-top: inherit;
+  margin-bottom: inherit;
+  color: red;
+  font-family: 'Berkshire Swash', cursive;
+  font-size: 3.5em;
+  text-shadow: 5px 5px white;
+  text-align: inherit;
 }
 
 td {
@@ -87,6 +99,14 @@ margin-bottom: 10px;
 
 #change-password {
 font-family: 'Berkshire Swash', cursive;
+}
+
+#reset {
+  font-family: 'Berkshire Swash', cursive;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: large;
+  color: red;
 }
 
 h3 {
