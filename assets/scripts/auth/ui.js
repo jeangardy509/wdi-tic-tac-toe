@@ -3,7 +3,6 @@
 const store = require('../store')
 const gameMove = ('./events.js')
 
-
 const signUpSuccess = function (data) {
   $('#message').text('Account Successfully created')
   $('#message').css('background-color', 'green')
