@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>JEAN'S TIC TAC TOE!</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Lobster" rel="stylesheet">
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <link href='https://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+
+    <body class="container-fluid">
+<h1>Welcome to Tic Tac Toe with Jean and friends!</h1>
+<h2>Please create an account or sign in to start playing!</h2>
+
+           <p id="message"></p>
+<div class="hide-for-signed-up">
+           <form id="sign-up" class="border">
+             <fieldset>
+               <input type="text" name="credentials[email]" placeholder="Email">
+               <input type="password" name="credentials[password]" placeholder="Password">
+               <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+               <input type="submit" value="Sign up!">
+             </fieldset>
+           </form>
+
+
+         </div>
+
+<div class="show-for-signed-in">
+<h3>Let's play tic tac toe with Jean and friends!</h3>
+             <form id="sign-out" class="border">
+               <fieldset>
+                 <input type="submit" value="Sign Out!">
+               </fieldset>
+           </form>
+
+           <form id="change-password" class="border">
+             <fieldset>
+               <input type="password" name="passwords[old]" placeholder="Old Password">
+               <input type="password" name="passwords[new]" placeholder="New Password">
+               <input type="submit" value="Change password!">
+             </fieldset>
+      </form>
+
+<p id="creategame"></p>
+
+      <form id="reset">
+        <fieldset>
+      <input  type="submit" value="Start a new game!">
+    </fieldset>
+      </form>
+
+      <div id="tictactoe" class="winner"></div>
+      <span id="status"></span>
+  			<span id='turn'>Player X</span>
+  		</div>
+    </body>
+</html>
